@@ -27,16 +27,16 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<github.global.server>github</github.global.server>
 	</properties>
-
-	<repositories>		
+	
+	<repositories>
 		<repository>
-            <id>eis-releases</id>
-            <url>https://raw.github.com/eishub/eis/releases/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
+			<id>eishub-mvn-repo</id>
+			<url>https://raw.github.com/eishub/mvn-repo/master</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
 	</repositories>
 	
 	<dependencies>
@@ -61,7 +61,7 @@
 	</distributionManagement>
 	
 	<scm>
-		<!--  used by buildnumber plugin -->
+		<!-- used by the buildnumber plugin -->
 		<connection>scm:git:https://github.com/eishub/blocksworld.git</connection>
 	</scm>
 
@@ -101,7 +101,50 @@
             			</manifest>
           			</archive>
         		</configuration>
+        		<!-- Yes I know: http://blog.sonatype.com/2010/01/how-to-create-two-jars-from-one-project-and-why-you-shouldnt/ -->
+        		<!-- Right now, it's just not worth the effort and a pity to mess up the directory structure. -->
+        		<!-- Perhaps we'll get back to this later. -->
+        		<executions>
+        			<!-- Generate the blocksworld.jar -->
+        			<execution>
+        				<id>blocksworld</id>
+        				<goals><goal>jar</goal></goals>
+        				<phase>package</phase>
+        				<configuration>
+        					<archive>
+            					<manifest>
+              						<addClasspath>true</addClasspath>
+              						<mainClass>${main.class.package}.${main.class}</mainClass>
+            					</manifest>
+          					</archive>
+        					<classifier>blocksworld</classifier>
+        					<excludes>
+        						<exclude>**/worldgenerator*</exclude>
+        					</excludes>
+        				</configuration>
+        			</execution>
+        			<!-- Generate the worldgenerator.jar -->
+        			<execution>
+						<id>worldgenerator</id>
+						<goals><goal>jar</goal></goals>
+						<phase>package</phase>
+						<configuration>
+        					<archive>
+            					<manifest>
+              						<addClasspath>true</addClasspath>
+              						<mainClass>worldgenerator.RandomWorldGenerator</mainClass>
+            					</manifest>
+          					</archive>
+							<classifier>worldgenerator</classifier>
+							<excludes>
+								<exclude>**/eishub</exclude>
+								<exclude>**/environment</exclude>
+							</excludes>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -129,6 +172,30 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<plugin>
+				<!-- See: http://akquinet.github.io/maven-latex-plugin/ -->
+                <groupId>de.akquinet.jbosscc.latex</groupId>
+                <artifactId>maven-latex-plugin</artifactId>
+                <version>1.2</version>
+                <inherited>false</inherited>
+                <configuration>
+                	<settings>
+                		<!-- all tex main documents in this folder (including subfolders) will be processed -->
+                		<texDirectory>${basedir}/src/main/latex</texDirectory>
+                		<!-- the generated artifacts will be copied to ${project.build.directory}/doc -->
+                		<outputDirectory>../doc</outputDirectory> 
+            		</settings>
+            	</configuration>
+                <executions>
+                    <execution>
+                        <phase>pre-site</phase>
+                        <goals>
+                            <goal>latex</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 			
 			<plugin>
 				<artifactId>maven-deploy-plugin</artifactId>
@@ -150,7 +217,8 @@
 					<branch>refs/heads/master</branch>							<!-- remote branch name -->
 					<includes><include>**/*</include></includes>
 					<repositoryName>mvn-repo</repositoryName>					<!-- github repo name -->
-                	<repositoryOwner>eishub</repositoryOwner>					<!-- github username  -->
+                	<repositoryOwner>eishub</repositoryOwner>					<!-- github organization -->
+                	<dryrun>true</dryrun>
                 </configuration>
             	<executions>
             		<!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
@@ -163,6 +231,7 @@
             	</executions>
             </plugin>
 		</plugins>
+
 	</build>
 
 </project>
