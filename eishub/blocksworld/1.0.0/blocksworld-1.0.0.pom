@@ -143,7 +143,7 @@
 				<artifactId>site-maven-plugin</artifactId>
 				<version>0.9</version>
 				<configuration>
-					<message>Maven artifacts for ${main.class} environment version ${project.version}</message>	<!-- git commit message -->
+					<message>Maven artifacts for ${project.name} environment version ${project.version}</message>	<!-- git commit message -->
 					<noJekyll>true</noJekyll>									<!-- disable webpage processing -->
 					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
 					<branch>refs/heads/master</branch>							<!-- remote branch name -->
