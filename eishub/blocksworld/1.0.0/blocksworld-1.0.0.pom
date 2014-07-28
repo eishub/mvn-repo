@@ -215,7 +215,10 @@
 					<noJekyll>true</noJekyll>									<!-- disable webpage processing -->
 					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
 					<branch>refs/heads/master</branch>							<!-- remote branch name -->
-					<includes><include>**/*</include></includes>
+					<includes>
+						<include>**/*</include>
+						<include>../doc</include>
+					</includes>
 					<repositoryName>mvn-repo</repositoryName>					<!-- github repo name -->
                 	<repositoryOwner>eishub</repositoryOwner>					<!-- github organization -->
                 	<dryrun>true</dryrun>
