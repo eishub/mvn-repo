@@ -202,7 +202,7 @@
 				<version>2.8.1</version>
 				<configuration>
 					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
-					<file>file://${project.build.directory}/doc/*</file>
+					<file>file://${project.build.directory}/doc/BlocksWorldManual</file>
 				</configuration>
 				<goals>
 					<goal>
