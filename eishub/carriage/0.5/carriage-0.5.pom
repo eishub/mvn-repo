@@ -23,7 +23,7 @@
 				<configuration>
 					<archive>
 						<manifestEntries>
-							<Main-Class>eishub.carriage.EnvironmentInterface</Main-Class>
+							<Main-Class>eishub.EnvironmentInterface</Main-Class>
 						</manifestEntries>
 					</archive>
 				</configuration>
