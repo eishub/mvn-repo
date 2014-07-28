@@ -202,7 +202,16 @@
 				<version>2.8.1</version>
 				<configuration>
 					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+					<file>file://${project.build.directory}/doc/*</file>
 				</configuration>
+				<goals>
+					<goal>
+						deploy
+					</goal>
+					<goal>
+						deploy-file
+					</goal>
+				</goals>
 			</plugin>
 			
 			<plugin>
@@ -217,7 +226,6 @@
 					<branch>refs/heads/master</branch>							<!-- remote branch name -->
 					<includes>
 						<include>**/*</include>
-						<include>../doc</include>
 					</includes>
 					<repositoryName>mvn-repo</repositoryName>					<!-- github repo name -->
                 	<repositoryOwner>eishub</repositoryOwner>					<!-- github organization -->
