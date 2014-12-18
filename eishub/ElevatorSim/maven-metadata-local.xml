@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>eishub</groupId>
+  <artifactId>ElevatorSim</artifactId>
+  <versioning>
+    <versions>
+      <version>1.2.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20141218141712</lastUpdated>
+  </versioning>
+</metadata>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>eishub.bw4t</groupId>
+  <artifactId>bw4t-integration-test</artifactId>
+  <versioning>
+    <versions>
+      <version>3.7.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20141218141531</lastUpdated>
+  </versioning>
+</metadata>
