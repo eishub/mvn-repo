@@ -149,8 +149,7 @@
 				<configuration>
 					<server>github</server>
 					<!-- git commit message -->
-					<message>Maven artifacts for ${project.name} version
-						${project.version}</message>
+					<message>Maven artifacts for ${project.name} version ${project.version}</message>
 					<!-- matches distribution management repository url above -->
 					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
 					<!-- remote branch name -->
