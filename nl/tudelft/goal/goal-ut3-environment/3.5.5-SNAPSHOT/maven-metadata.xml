@@ -5,44 +5,44 @@
   <version>3.5.5-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20150224.114200</timestamp>
-      <buildNumber>3</buildNumber>
+      <timestamp>20150224.114518</timestamp>
+      <buildNumber>4</buildNumber>
     </snapshot>
-    <lastUpdated>20150224114200</lastUpdated>
+    <lastUpdated>20150224114518</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>3.5.5-20150224.114200-3</value>
-        <updated>20150224114200</updated>
+        <value>3.5.5-20150224.114518-4</value>
+        <updated>20150224114518</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>3.5.5-20150224.114200-3</value>
-        <updated>20150224114200</updated>
+        <value>3.5.5-20150224.114518-4</value>
+        <updated>20150224114518</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar</extension>
-        <value>3.5.5-20150224.114200-3</value>
-        <updated>20150224114200</updated>
+        <value>3.5.5-20150224.114518-4</value>
+        <updated>20150224114518</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>3.5.5-20150224.114200-3</value>
-        <updated>20150224114200</updated>
+        <value>3.5.5-20150224.114518-4</value>
+        <updated>20150224114518</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>jar-with-dependencies</classifier>
         <extension>jar</extension>
-        <value>3.5.5-20150224.114200-3</value>
-        <updated>20150224114200</updated>
+        <value>3.5.5-20150224.114518-4</value>
+        <updated>20150224114518</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>eis_environment</classifier>
         <extension>jar</extension>
-        <value>3.5.5-20150224.114200-3</value>
-        <updated>20150224114200</updated>
+        <value>3.5.5-20150224.114518-4</value>
+        <updated>20150224114518</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
