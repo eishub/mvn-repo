@@ -3,10 +3,10 @@
   <groupId>nl.tudelft.goal</groupId>
   <artifactId>goal-ut-environment-examples</artifactId>
   <versioning>
-    <release>3.5.8</release>
+    <release>3.5.9</release>
     <versions>
-      <version>3.5.8</version>
+      <version>3.5.9</version>
     </versions>
-    <lastUpdated>20160406094843</lastUpdated>
+    <lastUpdated>20160407125138</lastUpdated>
   </versioning>
 </metadata>
