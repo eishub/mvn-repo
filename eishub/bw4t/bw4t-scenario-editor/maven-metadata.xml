@@ -3,10 +3,9 @@
   <groupId>eishub.bw4t</groupId>
   <artifactId>bw4t-scenario-editor</artifactId>
   <versioning>
-    <release>3.8.6</release>
     <versions>
-      <version>3.8.6</version>
+      <version>3.8.8-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20161003083800</lastUpdated>
+    <lastUpdated>20170220101929</lastUpdated>
   </versioning>
 </metadata>
