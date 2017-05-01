@@ -3,10 +3,10 @@
   <groupId>eishub</groupId>
   <artifactId>hanoi</artifactId>
   <versioning>
-    <release>0.1</release>
+    <release>1.0.0</release>
     <versions>
-      <version>0.1</version>
+      <version>1.0.0</version>
     </versions>
-    <lastUpdated>20150122091903</lastUpdated>
+    <lastUpdated>20170501132329</lastUpdated>
   </versioning>
 </metadata>
