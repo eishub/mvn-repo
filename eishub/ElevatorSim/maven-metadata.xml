@@ -3,10 +3,10 @@
   <groupId>eishub</groupId>
   <artifactId>ElevatorSim</artifactId>
   <versioning>
-    <release>1.4.0</release>
+    <release>1.4.1</release>
     <versions>
-      <version>1.4.0</version>
+      <version>1.4.1</version>
     </versions>
-    <lastUpdated>20180117144037</lastUpdated>
+    <lastUpdated>20190309160547</lastUpdated>
   </versioning>
 </metadata>
