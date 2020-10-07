@@ -3,10 +3,10 @@
   <groupId>eishub</groupId>
   <artifactId>eis</artifactId>
   <versioning>
-    <release>0.6.2</release>
+    <release>0.7.0</release>
     <versions>
-      <version>0.6.2</version>
+      <version>0.7.0</version>
     </versions>
-    <lastUpdated>20190309124606</lastUpdated>
+    <lastUpdated>20201007161149</lastUpdated>
   </versioning>
 </metadata>
