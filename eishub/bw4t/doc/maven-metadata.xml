@@ -3,10 +3,9 @@
   <groupId>eishub.bw4t</groupId>
   <artifactId>doc</artifactId>
   <versioning>
-    <release>1.0.9</release>
     <versions>
-      <version>1.0.9</version>
+      <version>1.0.10-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20190309154610</lastUpdated>
+    <lastUpdated>20201215100106</lastUpdated>
   </versioning>
 </metadata>
